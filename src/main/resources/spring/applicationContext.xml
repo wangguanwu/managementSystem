@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--这个xml配置SqlSessionFactory和数据源-->
+    <!--加载db.properties-->
+    <!--spring管理dataSource-->
+    <context:property-placeholder location="classpath:db.properties"/>
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="initialSize" value="3"/>
+        <property name="minIdle" value="3"/>
+        <property name="maxIdle" value="5"/>
+        <property name="maxTotal" value="15"/>
+    </bean>
+    <!--spring管理sqlSessionFactory bean-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="mybatis/SqlMapConfig.xml"/>
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--mapper扫描器配置-->
+    <bean  class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.szdx.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+    <bean id="departmentService" class="com.szdx.service.impl.DepartmentServiceImpl"/>
+    <bean id="employeeService" class="com.szdx.service.impl.EmployeeServiceImpl"/>
+</beans>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!--<properties resource="db.properties">-->
+        <!--&lt;!&ndash;在这里还可配置一些属性名和属性值&ndash;&gt;-->
+    <!--</properties>-->
+    <!--<settings>-->
+        <!--&lt;!&ndash;开启一级缓存功能&ndash;&gt;-->
+        <!--<setting name="lazyLoadingEnabled" value="true"/>-->
+        <!--<setting name="aggressiveLazyLoading" value="false"/>-->
+        <!--&lt;!&ndash;开启二级缓存功能&ndash;&gt;-->
+        <!--<setting name="cacheEnabled" value="true"/>-->
+        <!---->
+    <!--</settings>-->
+    <typeAliases>
+        <!--针对单个别名定义，type:类型的路径 alias:别名-->
+        <!--<typeAlias type="cn.szdx.mybatis.po.User" alias="user"/>-->
+        <!--批量别名定义(这个常用)
+            指定包名，mybatis自定扫描包的PO类，自动定义别名，别名就是类名，首字母大小写都可以)
+        -->
+        <!--<package name=""/>-->
+    </typeAliases>
+
+<!--<environments default="development">-->
+
+    <!--<environment id="development">-->
+        <!--<transactionManager type="JDBC"></transactionManager>-->
+        <!--<dataSource type="POOLED">-->
+            <!--<property name="driver" value="${jdbc.driver}"/>-->
+            <!--<property name="url" value="${jdbc.url}"/>-->
+            <!--<property name="username" value="${jdbc.username}"/>-->
+            <!--<property name="password" value="${jdbc.password}"/>-->
+        <!--</dataSource>-->
+    <!--</environment>-->
+<!--</environments>-->
+    <!--加载映射文件-->
+    <mappers>
+        <!--通过resources方法一次加载一个映射文件-->
+        <!--<mapper resource="sqlmap/User.xml"/>-->
+        <!--通过mapper接口加载映射文件-->
+        <!--遵循一些规范：需要将mapper接口类名和 mapper.xml映射文件名称
+        一致且在一个目录中。上边规范的问题是使用mapper代理方法-->
+        <!--<mapper class="cn.szdx.mybatis.mapper.UserMapper"/>-->
+        <!--<mapper class="cn.szdx.mybatis.mapper.UserMapper"/>-->
+        <package name="com.szdx.mapper"/>
+    </mappers>
+
+    
+</configuration>
+
+
