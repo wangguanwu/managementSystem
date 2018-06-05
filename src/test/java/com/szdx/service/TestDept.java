@@ -27,7 +27,7 @@ public class TestDept {
     }
     @Test
     public void testSelecyById()throws Exception{
-            Department department = departmentService.getDeptById(1) ;
+            Department department = departmentService.getDeptById(3) ;
             System.out.println(department);
     }
     @Test

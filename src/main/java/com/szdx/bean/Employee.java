@@ -9,7 +9,7 @@ public class Employee {
 
     private String gender;
 
-    private Integer departmentId;
+    private Integer deptId;
     Department department ;
 
     @Override
@@ -19,7 +19,7 @@ public class Employee {
                 ", empName='" + empName + '\'' +
                 ", empEmail='" + empEmail + '\'' +
                 ", gender='" + gender + '\'' +
-                ", departmentId=" + departmentId +
+                ", deptId=" + deptId +
                 ", department=" + department +
                 '}';
     }
@@ -64,11 +64,11 @@ public class Employee {
         this.gender = gender == null ? null : gender.trim();
     }
 
-    public Integer getDepartmentId() {
-        return departmentId;
+    public Integer getdeptId() {
+        return deptId;
     }
 
-    public void setDepartmentId(Integer departmentId) {
-        this.departmentId = departmentId;
+    public void setdeptId(Integer deptId) {
+        this.deptId = deptId;
     }
 }

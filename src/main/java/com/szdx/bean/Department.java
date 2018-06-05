@@ -1,7 +1,7 @@
 package com.szdx.bean;
 
 public class Department {
-    private Integer deptId;
+    private Integer deptId ;
 
     private String deptName;
 

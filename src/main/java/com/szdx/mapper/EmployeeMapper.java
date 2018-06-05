@@ -14,12 +14,13 @@ public interface EmployeeMapper {
     String select_fields="emp_id ,"+insert_fields ;
     /*=========删除==================*/
     @Delete({"delete from ",table_name,"where emp_id = #{empId}"})
+
     int deleteOneById(@Param("empId") Integer empId );
-    int udateOneById(@Param("empId") Integer empId, @Param("employee")Employee employee) ;
+    int updateOneById(@Param("empId") Integer empId, @Param("employee")Employee employee) ;
     @Insert({"insert into ",table_name ,"(",insert_fields,") values(#{empName}," +
             "#{empEmail}," +
             "#{gender}," +
-            "#{departmentId}"})
+            "#{deptId})"})
     int insertOne(Employee employee ) ;
 
     /*=============查询===============================*/
@@ -32,7 +33,8 @@ public interface EmployeeMapper {
     * @param limit返回记录最大行数
     * @param offset返回记录行的偏移量
     * 如果offset = 10 ,limit = 5会从数据库第十一行记录返回5条查询结果*/
-    List<Employee> selectByLimitAndOffset(@Param("offset") Integer offset) ;
+    List<Employee> selectByLimitAndOffset(@Param("offset") Integer offset,@Param("limit") Integer limit ) ;
+    List<Employee> selectEmployeeList();
     /*
     * 查询记录总数
     */
