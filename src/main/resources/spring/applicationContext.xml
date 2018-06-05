@@ -19,7 +19,7 @@
     </bean>
     <!--spring管理sqlSessionFactory bean-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="configLocation" value="mybatis/SqlMapConfig.xml"/>
+        <property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml"/>
         <property name="dataSource" ref="dataSource"/>
     </bean>
     <!--mapper扫描器配置-->
@@ -27,6 +27,12 @@
         <property name="basePackage" value="com.szdx.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
+    <!--开启组件扫描-->
+    <context:component-scan base-package="com.szdx">
+        <!--过滤掉controller,由springmvc.xml文件中扫描了controller-->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
     <bean id="departmentService" class="com.szdx.service.impl.DepartmentServiceImpl"/>
     <bean id="employeeService" class="com.szdx.service.impl.EmployeeServiceImpl"/>
+
 </beans>

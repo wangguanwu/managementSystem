@@ -7,10 +7,12 @@
     <welcome-file-list>
         <welcome-file>/WEB-INF/jsp/login.jsp</welcome-file>
     </welcome-file-list>
+    <!--启动spring容器，ContextLoaderListener-->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-    <!--启动spring容器，ContextLoaderListener-->
+
+    <!--加载spring容器-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:spring/applicationContext.xml</param-value>
