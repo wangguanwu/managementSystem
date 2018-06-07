@@ -35,9 +35,9 @@
                   <input class="form-control" placeholder="用户名:admin" name="username" autofocus>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" placeholder="密码:1234" name="password" value="">
+                  <input class="form-control" placeholder="密码:1234" name="password">
                 </div>
-                <a href="javascript:void(0)" class="btn btn-lg btn-success btn-block" id="login-btn">
+                <a href="javascript:void(0)" class="btn btn-lg btn-success btn-block" id="login_btn">
                   登录
                 </a>
               </fieldset>
@@ -52,14 +52,14 @@
     $(function(){
         $("#login_btn").click(function(){
             $.ajax({
-                url:"/szdx/login",
-                type:'POST',
+                url:"/szdx/dologin",
+                type:"POST",
                 data:$("#login_form").serialize(),
                 success:function(result){
                     if(result.code == 100 ){
                         window.location.href="/szdx/main";
                     }else{
-                        alert(result.extendInfo,login_error);
+                        alert(result.extendInfo.login_error);
                     }
                 }
             });

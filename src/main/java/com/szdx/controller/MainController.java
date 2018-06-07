@@ -5,5 +5,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/szdx")
+
 public class MainController {
 }

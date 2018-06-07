@@ -44,4 +44,8 @@ public class JsonMsg {
         res.setMsg("操作失败！");
         return res;
     }
+    public JsonMsg addInfo(String key , Object obj ){
+        this.extendInfo.put(key , obj );
+        return this ;
+    }
 }
