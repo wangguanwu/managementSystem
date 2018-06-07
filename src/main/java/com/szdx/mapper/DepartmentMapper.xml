@@ -30,5 +30,11 @@
     where
     dept_id = #{deptId}
   </update>
+  <select id="selectDeptList" resultMap="deptResult">
+    select
+    <include refid="select_fields"/>
+    from
+    <include refid="table_name"/>
+  </select>
 
 </mapper>

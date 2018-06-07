@@ -10,8 +10,13 @@ import java.util.List;
 
 @Service
 public class DepartmentServiceImpl implements DepartmentService {
+
     @Autowired
     DepartmentMapper departmentMapper ;
+    @Override
+    public List<Department> getDeptByName() {
+        return departmentMapper.selectDeptList() ;
+    }
     public int deleteDeptById( Integer deptId ) {
         return departmentMapper.deleteDeptById(deptId) ;
     }

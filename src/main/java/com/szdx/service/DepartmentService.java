@@ -12,5 +12,6 @@ public interface DepartmentService {
     public List<Department> getDeptList(Integer offset,Integer limit );
     public Department getDeptById(Integer deptId);
     public Department getDeptByName(String deptName ) ;
+    public List<Department> getDeptByName() ;
 
 }

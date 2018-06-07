@@ -1,15 +1,12 @@
 package com.szdx.controller;
 
 import com.szdx.bean.Employee;
-import com.szdx.mapper.EmployeeMapper;
 import com.szdx.service.EmployeeService;
 import com.szdx.util.JsonMsg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-
 import java.util.List;
 
 @Controller
@@ -145,9 +142,4 @@ public class EmployeeController {
                 .addAttribute("curPage",pageNo);
         return "employeePage";
     }
-
-
-
-
-
 }
