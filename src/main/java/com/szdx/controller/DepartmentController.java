@@ -18,7 +18,7 @@ public class DepartmentController {
     *部门删除
     *@Author MONSTER
     *@Date 2018/6/7 14:29
-    *@param deptId
+    *@param
     *@Return json
     **/
     @RequestMapping(value="/delDept/{deptId}", method = RequestMethod.DELETE)
@@ -72,7 +72,7 @@ public class DepartmentController {
      *部门信息总页码数
      *@Author MONSTER
      *@Date 2018/6/7 14:39
-     *@param []
+     *@param
      *@Return com.szdx.util.JsonMsg
      **/
     @RequestMapping(value="/getTotalPages",method=RequestMethod.GET)
@@ -83,6 +83,8 @@ public class DepartmentController {
         int temp = totalItems/limit ;
         int totalPages = (totalItems%limit == 0) ? temp : temp+1 ;
         return JsonMsg.success().addInfo("totalPages",totalPages);
+
+
     }
 
 
@@ -101,14 +103,14 @@ public class DepartmentController {
             department = departmentService.getDeptById(deptId);
         if(department==null)
             return JsonMsg.fail().addInfo("get_dept_error","无部门信息");
-        return JsonMsg.success().addInfo("department"，department);
+        return JsonMsg.success().addInfo("department",department);
     }
 
     /**
     *分页查询：返回指定页数对应的数据
     *@Author MONSTER
     *@Date 2018/6/7 14:46
-    *@param [model, pageNo]
+    *@param
     *@Return java.lang.String
     **/
     @RequestMapping(value="/getDeptList",method=RequestMethod.GET)

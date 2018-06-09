@@ -109,7 +109,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>SSM_HRMS</finalName>
+        <finalName>szdx-wang</finalName>
         <plugins>
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>

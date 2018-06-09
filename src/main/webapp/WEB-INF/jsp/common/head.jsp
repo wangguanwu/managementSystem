@@ -25,13 +25,13 @@
     <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button"class="navbar-toggle collapsed" data-toggle="collapse" data-target="#szdx-navbar-collapse-l" aria-expanded="false">
+                <button type="button"class="navbar-toggle collapsed" data-toggle="collapse" data-target="#szdx-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="nav-bar-brand" id="company-logo" href="#">
+                <a class="bar-brand" id="company_logo" href="#">
                     XXX公司LOGO
                 </a>
             </div>
@@ -51,7 +51,7 @@
                     </div>
                     <button type="submit" class="btn btn-default">搜索</button>
                 </form>
-                <ul class="nav navbar nav-bar-right">
+                <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
                            >账号管理<span class="caret"></span></a>

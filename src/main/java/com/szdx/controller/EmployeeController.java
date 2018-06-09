@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/szd/emp")
+@RequestMapping("/szdx/emp")
 public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
@@ -51,17 +51,16 @@ public class EmployeeController {
     }
 
     /**
-     * @param [empName]
+     * @param empName
      * @Author MONSTER
      * @Date 2018/6/7 11:18
      * @Return com.szdx.util.JsonMsg
      **/
     @RequestMapping(value = "/checkEmpExists", method = RequestMethod.GET)
-    @RequestBody
-
+    @ResponseBody
     public JsonMsg checkEmpExists(@RequestParam("empName") String empName) {
         /*对输入的姓名和邮箱格式进行验证*/
-        String regName = "(^[a-zA-Z0-9_-]{3,16}$)|(^[\\u2E80-\\u9FFF{2,5}";
+        String regName = "(^[a-zA-Z0-9_-]{3,16}$)|(^[\\u2E80-\\u9FFF]{2,5})";
         if (!empName.matches(regName)) {
             return JsonMsg.fail().addInfo("name_reg_error", "输入数字为2-5位中文或6-16位英文和数字组合");
         }
@@ -102,7 +101,7 @@ public class EmployeeController {
         if (res == 1) {
             return JsonMsg.success();
         } else {
-            return JsonMsg.fail().addInfo();
+            return JsonMsg.fail();
         }
     }
     /**

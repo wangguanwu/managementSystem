@@ -14,9 +14,9 @@
 <div class="container">
     <%@include file="./common/head.jsp"%> 
     <div class="szdx_body" style="position:relative;top:-15px;">
-        <!-- <%--左侧栏--%>
+      <%--左侧栏--%>
         <%@include file="./common/leftsidebar.jsp"%>
-        <%--中间轮播内容--%> -->
+        <%--中间轮播内容--%>
         <div class="szdx_main_ad col-sm-10">
             <div class="panel panel_success">
                 <div class="panel-heading">

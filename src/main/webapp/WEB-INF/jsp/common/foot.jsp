@@ -12,7 +12,7 @@
 
 </head>
 <body>
-<div class="szdx_footer" style="test-align:center">
+<div class="szdx_footer" style="text-align:center">
     <address>
         <strong>CopyRight@XXX公司.Inc</strong>
         <br>
