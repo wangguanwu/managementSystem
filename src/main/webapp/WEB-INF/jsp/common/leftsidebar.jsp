@@ -14,7 +14,7 @@
             </a>
             <ul class="nav nav-pills nav-stacked" id="collapse_emp">
                 <li role="presentation"><a href="#" class="emp_info">员工信息</a></li>
-                <li role="presentation"><a href="#" role="button" class="emp_add_btn" data-toggle="modal" data-target="emp-add-modal">员工新增</a></li>
+                <li role="presentation"><a href="#" role="button" class="emp_add_btn" data-toggle="modal" data-target=".emp-add-modal">员工新增</a></li>
                 <li role="presentation"><a href="#" class="emp_clearall_btn">员工清零</a></li>
             </ul>
         </li>
