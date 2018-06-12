@@ -79,7 +79,7 @@ public class EmployeeController {
      * @Date 2018/6/7 13:53
      * @Return
      **/
-    @RequestMapping(value = "/getTotalPages", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/getTotalPages", method = RequestMethod.GET)
     @ResponseBody
     public JsonMsg goTotalPages() {
         int totalItems = employeeService.getEmpCount();

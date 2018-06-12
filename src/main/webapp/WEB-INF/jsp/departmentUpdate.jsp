@@ -20,26 +20,26 @@
                 </button>
                 <h4 class="modal-title">部门更改</h4>
             </div>
-        </div>
-        <div class="modal-body">
-            <form class="form-horizontal update_dept_form">
-                <div class="form-group">
-                    <label for="update_deptName" class="col-sm-2 control-label">部门名称</label>
-                    <div class="col-sm-8">
-                        <input type="text" name="deptName" class="form-control" id="update_deptName"/>
+            <div class="modal-body">
+                <form class="form-horizontal update_dept_form">
+                    <div class="form-group">
+                        <label for="update_deptName" class="col-sm-2 control-label">部门名称</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="deptName" class="form-control" id="update_deptName"/>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="update_deptLeader" class="col-sm-2 control-label">部门老大</label>
-                    <div class="col-sm-8">
-                        <input type="text" name="deptLeader" class="form-control" id="update_deptLeader"/>
+                    <div class="form-group">
+                        <label for="update_deptLeader" class="col-sm-2 control-label">部门老大</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="deptLeader" class="form-control" id="update_deptLeader"/>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div>
-        <div class="footer">
-            <button type="button" class="btn btn-default" date-dismiss="modal">关闭</button>
-            <button type="button" class="btn btn-primary update_dept_btn">保存</button>
+                </form>
+            </div>
+            <div class="footer">
+                <button type="button" class="btn btn-default" date-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary update_dept_btn">保存</button>
+            </div>
         </div>
     </div>
 </div>

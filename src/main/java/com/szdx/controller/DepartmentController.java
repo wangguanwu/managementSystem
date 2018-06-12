@@ -40,7 +40,7 @@ public class DepartmentController {
     *@param deptId ,department
     *@Return json
     **/
-    @RequestMapping(value="/updateDept/{deptId}",method=RequestMethod.PUT)
+    @RequestMapping(value="/updateDeptById/{deptId}",method=RequestMethod.PUT)
     @ResponseBody
     public JsonMsg updateDeptById(@PathVariable(value="deptId") Integer deptId , Department department){
         int res = 0 ;

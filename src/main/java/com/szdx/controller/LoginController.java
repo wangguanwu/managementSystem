@@ -27,7 +27,6 @@ public class LoginController {
     public JsonMsg dologin(HttpServletRequest request ){
         String username =(String) request.getParameter("username");
         String password = (String)request.getParameter("password");
-        System.out.println(username+":"+password);
         if(username.equals("admin")&&password.equals("1234")){
             /*保存用户登录信息*/
             request.getSession().setAttribute("username",username);

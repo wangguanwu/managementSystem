@@ -74,7 +74,7 @@
                                     </a>
                                 </li>
                             </c:if>
-                            <c:forEach begin="1" end="${totalPages < 5 ?totalPages:5}" step="1" val="itemPage">
+                            <c:forEach begin="1" end="${totalPages < 5 ?totalPages:5}" step="1" var="itemPage">
                                 <c:if test="${curPageNo == itemPage}">
                                     <li class="active"><a href="/szdx/dept/getDeptList?pageNo=${itemPage}">${itemPage}</a></li>
                                 </c:if>

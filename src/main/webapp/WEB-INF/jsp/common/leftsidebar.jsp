@@ -26,7 +26,7 @@
             </a>
             <ul class="nav nav-pills nav-stacked" id="collapse_dept">
                 <li role="presentation"><a href="#" class="dept_info">部门信息</a></li>
-                <li role="presentation"><a href="#" class="dept_add_btn" data-toggle="modal" data-target=".dept_add_modal">部门新增</a></li>
+                <li role="presentation"><a href="#" class="dept_add_btn" data-toggle="modal" data-target=".dept-add-modal">部门新增</a></li>
                 <li role="presentation"><a href="#" class="dept_clearall_btn">部门清零</a></li>
             </ul>
         </li>

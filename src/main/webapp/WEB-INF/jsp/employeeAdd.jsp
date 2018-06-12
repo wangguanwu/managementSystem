@@ -82,7 +82,7 @@
         });
         $(".emp-add-modal").modal({
             backdrop:static,
-            keyboard:true,
+            keyboard:true
         })
     });
     /*鼠标从姓名输入框移开的时候，判断姓名输入框的姓名是否重复*/
@@ -114,7 +114,7 @@
         }
         var inputName = $("#add_inputName").val();
         var inputEmail = $("#add_inputEmail").val();
-        var regName = /(^a-zA-Z0-9_-]{3,16}$)|([\u2E80-\u9FFF]{2,5})/;
+        var regName = /(^[a-zA-Z0-9_-]{3,16}$)|([\u2E80-\u9FFF]{2,5})/;
         var regEmail = /(^[a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
         if(!regName.test(inputName)){
             alert("测试：输入姓名不正确");
@@ -143,7 +143,7 @@
             success:function(result){
                 if(result.code==100) {
                     alert("员工新增成功");
-                    $("#emp-add-modal").modal("hide");
+                    $(".emp-add-modal").modal("hide");
                     //跳往最后一页
                     $.ajax({
                         url: "/szdx/emp/getTotalPages",
