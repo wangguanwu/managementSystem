@@ -11,16 +11,10 @@ public class LoginInterceptors implements HandlerInterceptor {
 
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         Administrator administrator =(Administrator)httpServletRequest.getSession().getAttribute("admin");
-        String logined = (String) httpServletRequest.getSession().getAttribute("logined");
-        if(logined == null )
-            return true ;
-        else{//如果从登录中退出
-
+        if(administrator == null){
+            return false;
         }
-        if(administrator==null){
-            return false ;
-        }
-        return true;
+        return true ;
     }
 
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {

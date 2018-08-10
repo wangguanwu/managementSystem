@@ -73,7 +73,7 @@
         $(this).attr("href","/szdx/main");
     })
     $(".szdx_logout").click(function(){
-        window.location.href="/szdx/logout";
+        window.location.href="/logout";
     })
 </script>
 </body>

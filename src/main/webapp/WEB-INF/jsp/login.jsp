@@ -52,7 +52,7 @@
     $(function(){
         $("#login_btn").click(function(){
             $.ajax({
-                url:"/szdx/dologin",
+                url:"/dologin",
                 type:"POST",
                 data:$("#login_form").serialize(),
                 success:function(result){

@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-@RequestMapping("/szdx")
+@RequestMapping("/")
 public class LoginController {
     /*跳转到的登录页面
      */
@@ -48,7 +48,7 @@ public class LoginController {
     }
     /*跳转到主页面*/
 
-    @RequestMapping(value="/main", method=RequestMethod.GET)
+    @RequestMapping(value="/szdx/main", method=RequestMethod.GET)
     /**
     *@
     *
@@ -71,7 +71,7 @@ public class LoginController {
     @RequestMapping(value = "/logout",method=RequestMethod.GET)
     public String logout(HttpServletRequest request){
         request.getSession().invalidate();/*会话信息过期*/
-        request.getSession().setAttribute("logined","logined");//表示已经登陆过了
+//        request.getSession().setAttribute("logined","logined");//表示已经登陆过了
         return "login";
     }
     
