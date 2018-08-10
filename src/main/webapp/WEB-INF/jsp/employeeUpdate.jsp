@@ -93,6 +93,7 @@
                 if(result.code==100){
                     $.each(result.extendInfo.departmentList,function(){
                         var optEle=$("<option></option>").append(this.deptName).attr("value",this.deptId);
+                        $("#update_department").empty();
                         optEle.appendTo("#update_department");
                     });
                 }
@@ -126,6 +127,7 @@
                     var curPage = ${curPage};
                     window.location.href="/szdx/emp/getEmpList?pageNo="+curPage;
                 }else{
+                }else
                     alert(result.extendInfo.emp_update_error);
                 }
             }

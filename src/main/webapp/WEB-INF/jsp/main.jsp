@@ -11,7 +11,7 @@
     <title>XXX公司人力资源管理部</title>
 </head>
 <body>
-<div class="container">
+<div class="szdx_container">
     <%@include file="./common/head.jsp"%> 
     <div class="szdx_body" style="position:relative;top:-15px;">
       <%--左侧栏--%>

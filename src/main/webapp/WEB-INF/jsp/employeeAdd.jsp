@@ -75,6 +75,7 @@
                 if(result.code == 100 ){
                     $.each(result.extendInfo.departmentList,function(item){
                         var optionFile = $("<option></option>").append(this.deptName).attr("value",this.deptId);
+                        $("#add_department").empty();
                         optionFile.appendTo("#add_department");
                     });
                 }

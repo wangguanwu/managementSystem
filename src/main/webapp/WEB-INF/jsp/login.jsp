@@ -32,7 +32,7 @@
             <form role="form" action="#" method="post" id="login_form">
               <fieldset>
                 <div class="form-group">
-                  <input class="form-control" placeholder="用户名:admin" name="username" autofocus>
+                  <input class="form-control" placeholder="用户名:admin" name="name" autofocus>
                 </div>
                 <div class="form-group">
                   <input class="form-control" placeholder="密码:1234" name="password">

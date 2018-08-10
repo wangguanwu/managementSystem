@@ -32,10 +32,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="bar-brand" id="company_logo" href="#">
+                <a class="navbar-brand" id="company_logo" href="#">
                     XXX公司LOGO
                 </a>
             </div>
+
             <div class="collapse navbar-collapse" id="szdx-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active">
@@ -59,7 +60,7 @@
                         <ul class="dropdown-menu nav nav-pills nav-stacked">
                             <li class="active"><a href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改信息</a></li>
                             <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>头像更换</a></li>
-                            <li><a href="#" class="szdx_logout"><span class="glyphicon glyphicon-off" aria-hidden="true"></span>账号管理</a></li>
+                            <li><a href="#" class="szdx_logout"><span class="glyphicon glyphicon-off" aria-hidden="true"></span>账号退出</a></li>
                         </ul>
                     </li>
                 </ul>

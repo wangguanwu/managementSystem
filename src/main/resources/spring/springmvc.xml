@@ -15,6 +15,14 @@
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+    <!--配置静态资源的请求的默认处理器，支持REST风格-->
+    <mvc:default-servlet-handler/>
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/><!--配置登录拦截器 -->
+            <bean class="com.szdx.controller.interceptors.LoginInterceptors"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 
 </beans>

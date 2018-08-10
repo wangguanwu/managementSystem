@@ -11,7 +11,7 @@
     <title>department Update Page</title>
 </head>
 <body>
-<div class="modal fade dept-upate-modal" tabindex="-1" role="dialog" aria-labelledby="dept-update-modal">
+<div class="modal fade dept-update-modal" tabindex="-1" role="dialog" aria-labelledby="dept-update-modal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -51,7 +51,7 @@
         alert("id"+edit_deptId);
         //查询对应ID的部门信息
         $.ajax({
-            url:"/szdx/dept/getDeptById",
+            url:"/szdx/dept/getDeptById/"+edit_deptId,
             type:"GET",
             success:function(result){
                 if(result.code==100){
